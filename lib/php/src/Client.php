@@ -111,9 +111,7 @@ class Client implements ClientInterface
     {
         $ruleset = $this->getRuleset();
         $asciiRegexp = $ruleset->getAsciiRegexp();
-        $unicode = preg_replace_callback('/'.$this->ignoredRegexp.'|((\\s|^)'.$asciiRegexp.'(?=\\s|$|[!,.?]))/S', array($this, 'asciiToShortnameCallback'), $string);
-
-        return $string;
+        return preg_replace_callback('/'.$this->ignoredRegexp.'|((\\s|^)'.$asciiRegexp.'(?=\\s|$|[!,.?]))/S', array($this, 'asciiToShortnameCallback'), $string);
     }
 
     /**
@@ -315,7 +313,6 @@ class Client implements ClientInterface
             $shortname = $m[3];
             $unicode = $ascii_replace[$shortname];
             return $shortcode_replace[$unicode];
-            return $m[2].$this->convert($unicode);
         }
     }
 
