@@ -427,7 +427,11 @@ class Client implements ClientInterface
 
             if ( !array_key_exists($unicode, $unicode_replace) )
             {
-                return $m[0];
+                $unicode .= "\xEF\xB8\x8F";
+
+                if ( !array_key_exists($unicode, $unicode_replace) ) {
+                    return $m[0];
+                }
             }
 
             return $unicode_replace[$unicode];
