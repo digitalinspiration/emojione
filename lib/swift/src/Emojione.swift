@@ -2480,7 +2480,7 @@ struct Emojione {
         "regional_indicator_z": "\u{0001f1ff}",
         "regional_indicator_y": "\u{0001f1fe}",
         "regional_indicator_x": "\u{0001f1fd}",
-        "pound_symbol": "#",
+        "pound_symbol": "\u{0001f4b7}",
         "tone1": "\u{0001f3fb}",
         "tone2": "\u{0001f3fc}",
         "tone3": "\u{0001f3fd}",
